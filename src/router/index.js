@@ -2,8 +2,8 @@ import React from 'react'
 import { func, shape, string } from 'prop-types'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
-import LoginScreen from './screens/auth/LoginScreen'
-import SignupScreen from './screens/auth/SignupScreen'
+import LoginScreen from '../screens/auth/LoginScreen'
+import SignupScreen from '../screens/auth/SignupScreen'
 
 import '../styles/global'
 import { getUserToken } from './utils/helpers/login'
