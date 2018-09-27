@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react'
+import { Provider } from 'react-redux'
 
-class App extends Component {
+import Router from './router'
+import store from './store'
+
+class App extends PureComponent {
   render() {
     return (
-      <div className="App">
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <Provider store={store}>
+        <Router />
+      </Provider>
+    )
   }
 }
 
-export default App;
+export default App
