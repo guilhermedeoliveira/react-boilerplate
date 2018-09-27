@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const LoginScreen = () => (
+const LoginScreen = () => (
   <div>
     LoginScreen
   </div>

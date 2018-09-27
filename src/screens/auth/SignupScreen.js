@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const SignupScreen = () => (
+const SignupScreen = () => (
   <div>
     SignupScreen
   </div>

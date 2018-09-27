@@ -1,6 +1,6 @@
-import { keyframes } from 'styled-components';
+import { keyframes } from 'styled-components'
 
-export const translateTopToBottom = (from, to) => keyframes`
+export const translateVertically = (from, to) => keyframes`
   0% {
     opacity: 0;
     transform: translateY(${from});
@@ -10,4 +10,6 @@ export const translateTopToBottom = (from, to) => keyframes`
     opacity: 1;
     transform: translateY(${to});
   }
-`;
+`
+
+export const shake = () => {}

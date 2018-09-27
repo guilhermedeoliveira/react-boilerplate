@@ -1,6 +1,8 @@
 import React from 'react'
 import { func, shape, string } from 'prop-types'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import {
+  BrowserRouter, Switch, Route, Redirect
+} from 'react-router-dom'
 
 import LoginScreen from '../screens/auth/LoginScreen'
 import SignupScreen from '../screens/auth/SignupScreen'
@@ -11,17 +13,16 @@ import { getUserToken } from '../utils/helpers/login'
 const AuthenticatedRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    render={props =>
-      (getUserToken() ? (
-        <Component {...props} />
-      ) : (
-        <Redirect
-          to={{
-            pathname: '/login',
-            state: { from: props.location }
-          }}
-        />
-      ))
+    render={props => (getUserToken() ? (
+      <Component {...props} />
+    ) : (
+      <Redirect
+        to={{
+          pathname: '/login',
+          state: { from: props.location }
+        }}
+      />
+    ))
     }
   />
 )
@@ -29,17 +30,16 @@ const AuthenticatedRoute = ({ component: Component, ...rest }) => (
 const LoginRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
-    render={props =>
-      (getUserToken() ? (
-        <Redirect
-          to={{
-            pathname: '/',
-            state: { from: props.location }
-          }}
-        />
-      ) : (
-        <Component {...props} />
-      ))
+    render={props => (getUserToken() ? (
+      <Redirect
+        to={{
+          pathname: '/',
+          state: { from: props.location }
+        }}
+      />
+    ) : (
+      <Component {...props} />
+    ))
     }
   />
 )

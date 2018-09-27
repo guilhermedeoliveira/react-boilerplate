@@ -78,35 +78,33 @@ export default (state = initialState, action) => {
   }
 }
 
-export const loginUsername = username =>
-  async (dispatch) => {
-    try {
-      dispatch({ type: Types.LOGIN_USERNAME })
+export const loginUsername = username => async (dispatch) => {
+  try {
+    dispatch({ type: Types.LOGIN_USERNAME })
 
-      const { data } = await Api.login(username)
+    const { data } = await Api.login(username)
 
-      dispatch({ type: Types.LOGIN_USERNAME_SUCCESS, payload: data })
-    } catch (err) {
-      dispatch({ type: Types.LOGIN_USERNAME_FAILURE, payload: err.response.data })
-    }
+    dispatch({ type: Types.LOGIN_USERNAME_SUCCESS, payload: data })
+  } catch (err) {
+    dispatch({ type: Types.LOGIN_USERNAME_FAILURE, payload: err.response.data })
   }
+}
 
-export const loginPassword = (password, navigationCallback = () => {}) =>
-  async (dispatch) => {
-    try {
-      dispatch({ type: Types.LOGIN_PASSWORD })
+export const loginPassword = (password, navigationCallback = () => {}) => async (dispatch) => {
+  try {
+    dispatch({ type: Types.LOGIN_PASSWORD })
 
-      const { data } = await Api.login(password)
-      setUserToken(data.token)
+    const { data } = await Api.login(password)
+    setUserToken(data.token)
 
-      dispatch({ type: Types.LOGIN_PASSWORD_SUCCESS, payload: data.user })
-      dispatch(getUserById(data.user._id))
+    dispatch({ type: Types.LOGIN_PASSWORD_SUCCESS, payload: data.user })
+    dispatch(getUserById(data.user._id))
 
-      navigationCallback()
-    } catch (err) {
-      dispatch({ type: Types.LOGIN_PASSWORD_FAILURE, payload: err.response.data })
-    }
+    navigationCallback()
+  } catch (err) {
+    dispatch({ type: Types.LOGIN_PASSWORD_FAILURE, payload: err.response.data })
   }
+}
 
 export const logout = navigationCallback => (dispatch) => {
   removeUserToken()

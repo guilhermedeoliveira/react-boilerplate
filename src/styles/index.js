@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import { css, keyframes } from 'styled-components';
+import { css } from 'styled-components';
 
 const sizes = {
   desktop: 992,
