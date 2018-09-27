@@ -23,6 +23,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lintprod": "eslint ./src --cache --ignore-pattern .gitignore",
+    "lint": "eslint ./src --cache --ignore-pattern .gitignore",
+    "fix": "eslint ./src --fix",
+    "precommit": "npm run lint",
+    "surge": "npm run build && cp build/index.html build/200.html && surge build api-web-dev.surge.sh"
   }
 }
