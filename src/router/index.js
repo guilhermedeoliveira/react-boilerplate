@@ -6,7 +6,7 @@ import LoginScreen from '../screens/auth/LoginScreen'
 import SignupScreen from '../screens/auth/SignupScreen'
 
 import '../styles/global'
-import { getUserToken } from './utils/helpers/login'
+import { getUserToken } from '../helpers/login'
 
 const AuthenticatedRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -49,7 +49,7 @@ const Router = () => (
     <Switch>
       <LoginRoute path="/login" component={LoginScreen} />
 
-      <AuthenticatedRoute path="/resource" component={() => <h1>Protected Route</h1>} />
+      <AuthenticatedRoute path="/" component={() => <h1>Protected Route</h1>} />
 
       <Route path="/signup" component={SignupScreen} />
       <Route path="*" component={() => <h1>Essa rota não existe!</h1>} />
