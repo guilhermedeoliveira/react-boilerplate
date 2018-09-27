@@ -60,7 +60,8 @@
     "react/no-array-index-key": 0,
     "react/require-default-props": 0,
     "react/sort-comp": 0,
-    "strict": 0
+    "strict": 0,
+    "semi": 0
   },
   "plugins": [
     "jsx-a11y",
