@@ -6,7 +6,7 @@ import LoginScreen from '../screens/auth/LoginScreen'
 import SignupScreen from '../screens/auth/SignupScreen'
 
 import '../styles/global'
-import { getUserToken } from '../helpers/login'
+import { getUserToken } from '../utils/helpers/login'
 
 const AuthenticatedRoute = ({ component: Component, ...rest }) => (
   <Route

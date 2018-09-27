@@ -1,6 +1,6 @@
 import Api from '../config/api'
 import { getUserById } from './user'
-import { setUserToken, removeUserToken } from '../helpers/login'
+import { setUserToken, removeUserToken } from '../utils/helpers/login'
 
 export const Types = {
   LOGIN_USERNAME: 'auth/LOGIN_USERNAME',

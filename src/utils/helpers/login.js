@@ -1,4 +1,4 @@
-import { AUTH_ID_TOKEN } from '../config/constants'
+import { AUTH_ID_TOKEN } from '../../config/constants'
 
 export const setUserToken = token =>
   localStorage.setItem(AUTH_ID_TOKEN, token)
