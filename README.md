@@ -1,15 +1,16 @@
 # React Boilerplate
 
-A scalable structure to reuse in React projects
+A scalable structure to use in React projects
 
 ## Organization
 
-* **components** - shared common components
-* **config** - configuration. it should use `.env` files to isolate environments
-* **router** - routing. This boilerplate uses [react-router-dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
-* **screens** - Root level components, represents screens rendered in different routes
+* **components** - UI components
+* **config** - configuration, should use `.env` files to isolate environments
+* **modules** - app modules
+* **router** - routing, uses [react-router-dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
+* **screens** - root level components, represents screens rendered in different routes. Screens should be functional components
 * **store** - state management configured with [redux](https://github.com/reduxjs/redux) following [duck pattern](https://medium.freecodecamp.org/scaling-your-redux-app-with-ducks-6115955638be)
-* **styles** - styling. Configured with [styled-compoents](https://github.com/styled-components/styled-components)
+* **styles** - styling, uses [styled-components](https://github.com/styled-components/styled-components)
 * **utils** - utilities files, including helpers function. Components should be as clean as possible
 
 ## Project Structure
@@ -22,6 +23,7 @@ A scalable structure to reuse in React projects
 │   ├── config
 |   |   ├── api.js
 |   |   ├── constants.js
+│   ├── modules
 │   ├── router
 |   |   ├── index.js
 │   ├── screens
